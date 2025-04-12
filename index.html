@@ -4,31 +4,61 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZoomCasa - Real Estate Media Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleServices() {
+      const section = document.getElementById('services-section');
+      if (section.style.display === 'none' || section.style.display === '') {
+        section.style.display = 'block';
+        section.classList.add('animated-services');
+        section.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        section.style.display = 'none';
+        section.classList.remove('animated-services');
+      }
+    }
+  </script>
 </head>
 <body>
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleServices()">Our Services</button>
+      <div class="dropdown-content">
+        <a href="#image-editing">Image Editing</a>
+        <a href="#video-editing">Video Editing</a>
+        <a href="#virtual-staging">Virtual Staging</a>
+        <a href="#drone-images">Drone Images</a>
+        <a href="#floor-plans">Floor Plans</a>
+      </div>
+    </div>
+  </nav>
+
   <header>
     <h1>ZoomCasa</h1>
-    <p>Professional Real Estate Image & Video Editing | 24/7 Service | 7+ Years Experience</p>
+    <p>We are professional image editors — precision, passion, and perfection in every pixel.</p>
   </header>
 
-  <section>
+  <section id="services-section">
     <h2 style="text-align:center;">Our Services</h2>
     <div class="services">
-      <div class="card">
+      <div class="card" id="image-editing">
         <h3>Image Editing</h3>
         <p>Flawless retouching, sky replacements, color correction and more to make every listing pop.</p>
       </div>
-      <div class="card">
+      <div class="card" id="video-editing">
         <h3>Video Editing</h3>
         <p>Branded videos, smooth walkthroughs, agent intros—edited for maximum impact.</p>
       </div>
-      <div class="card">
+      <div class="card" id="virtual-staging">
         <h3>Virtual Staging</h3>
         <p>Empty room? No problem. We add tasteful furniture and decor to drive imagination.</p>
       </div>
-      <div class="card">
+      <div class="card" id="drone-images">
+        <h3>Drone Images</h3>
+        <p>Beautiful aerial shots to showcase the full property and surrounding area.</p>
+      </div>
+      <div class="card" id="floor-plans">
         <h3>Floor Plans</h3>
         <p>Clean, accurate, and fast-delivered floor plans for better property understanding.</p>
       </div>
@@ -54,12 +84,12 @@
   </section>
 
   <div class="cta">
-    <p>Let’s bring your listings to life. Get in touch today!</p>
-    <a href="mailto:zoomcasapvtltd@gmail.com">Contact Us</a>
+    <p>Let’s create visuals that sell. Reach out and see the difference!</p>
+    <a href="mailto:hello@zoomcasa.com">Contact Us</a>
   </div>
 
   <footer>
-    &copy; 2025 ZoomCasa. All rights reserved.
+    &copy; 2018 ZoomCasa. All rights reserved.
   </footer>
 </body>
 </html>
