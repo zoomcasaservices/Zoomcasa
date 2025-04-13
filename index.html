@@ -1,15 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZoomCasa - Real Estate Media Services</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background-color: #0a66c2;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+      position: relative;
+    }
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 120px;
+      opacity: 0.5;
+      animation: fadeInLogo 2s ease-in-out forwards;
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 3em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 1.5s ease-in;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.5s ease forwards;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #0a66c2;
+    }
+    .description {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      font-size: 0.95em;
+      color: #555;
+      margin-top: 10px;
+      height: 0;
+      overflow: hidden;
+    }
+    .card:hover .description {
+      opacity: 1;
+      height: auto;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+      animation: fadeInUp 1s ease-in;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #0a66c2;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      font-size: 0.9em;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInLogo {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 0.5; transform: scale(1); }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="your-logo.png" alt="ZoomCasa Logo" class="logo" />
+    <img src="your-logo.png" alt="ZoomCasa Logo" class="logo">
     <h1>ZoomCasa</h1>
     <p>Professional Real Estate Image & Video Editing | 24/7 Service | 7+ Years Experience</p>
   </header>
@@ -17,30 +125,30 @@
   <section>
     <h2 style="text-align:center;">Our Services</h2>
     <div class="services">
-      <!-- Repeatable Service Card Block -->
-      <div class="card">
-        <h3>Image Enhancement</h3>
-        <div class="description">We clean up your photos by adjusting brightness, contrast, and color — just enough to make everything pop and look super polished.</div>
-      </div>
-      <!-- Add other service cards here like above -->
+      <div class="card"><h3>Image Enhancement</h3><div class="description">We clean up your photos by adjusting brightness, contrast, and color — just enough to make everything pop and look super polished.</div></div>
+      <div class="card"><h3>HDR Bracketing</h3><div class="description">We blend multiple exposures together so you get a perfectly balanced shot with great detail in both the shadows and highlights.</div></div>
+      <div class="card"><h3>Aerial Edit</h3><div class="description">We fine-tune your drone shots to make sure they’re sharp, colorful, and eye-catching from up high.</div></div>
+      <div class="card"><h3>Flash Ambient</h3><div class="description">We combine flash and natural light shots to get crisp, well-lit interiors with true-to-life colors and minimal shadows.</div></div>
+      <div class="card"><h3>360° Enhancement</h3><div class="description">We stitch your 360° shots smoothly and fix colors so your virtual tours look seamless and professional.</div></div>
+      <div class="card"><h3>Day to Dusk</h3><div class="description">We take your daytime shots and turn them into gorgeous twilight scenes — perfect for adding that warm, inviting glow.</div></div>
+      <div class="card"><h3>Twilight</h3><div class="description">We enhance your real twilight photos by boosting colors and lighting, making every shot look magical and dramatic.</div></div>
+      <div class="card"><h3>Item Removal</h3><div class="description">Got unwanted stuff in the photo? We’ll take it out cleanly — whether it’s clutter, signage, or even furniture.</div></div>
+      <div class="card"><h3>Portrait</h3><div class="description">We retouch portraits to bring out natural beauty while keeping it real — great for agent headshots or lifestyle photos.</div></div>
+      <div class="card"><h3>Real Estate Video</h3><div class="description">We create a sleek, cinematic video walkthrough that highlights the best features of the property in under two and a half minutes.</div></div>
+      <div class="card"><h3>Staging</h3><div class="description">We digitally furnish empty rooms to make them feel like home — modern, stylish, and realistic.</div></div>
+      <div class="card"><h3>Clipping Path</h3><div class="description">We cut out your subject from the background with precision, so you can place it wherever you need.</div></div>
+      <div class="card"><h3>2D Floor Plan</h3><div class="description">Clean, easy-to-read black-and-white floor plans that show the layout of the property at a glance.</div></div>
+      <div class="card"><h3>2D Floor Plan (Color)</h3><div class="description">Same as our 2D plans, but with color — adds a little extra clarity and visual appeal.</div></div>
+      <div class="card"><h3>3D Floor Plan</h3><div class="description">A full 3D layout with furniture and textures to give clients a clear, lifelike sense of the space.</div></div>
     </div>
   </section>
 
   <section>
     <h2 style="text-align:center;">Why Choose ZoomCasa?</h2>
     <div class="services">
-      <div class="card">
-        <h3>Available 24/7</h3>
-        <p>No matter your time zone, we’re ready when you are.</p>
-      </div>
-      <div class="card">
-        <h3>7+ Years of Experience</h3>
-        <p>Trusted by real estate pros worldwide to deliver consistently great results.</p>
-      </div>
-      <div class="card">
-        <h3>Affordable Pricing</h3>
-        <p>Top-tier quality that doesn’t break the bank.</p>
-      </div>
+      <div class="card"><h3>Available 24/7</h3><p>No matter your time zone, we’re ready when you are.</p></div>
+      <div class="card"><h3>7+ Years of Experience</h3><p>Trusted by real estate pros worldwide to deliver consistently great results.</p></div>
+      <div class="card"><h3>Affordable Pricing</h3><p>Top-tier quality that doesn’t break the bank.</p></div>
     </div>
   </section>
 
