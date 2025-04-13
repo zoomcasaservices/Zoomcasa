@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <header>
-  <img src="logo.png" alt="ZoomCasa Logo" style="height:80px; margin-bottom: 20px;">
-  <h1>ZoomCasa</h1>
-  <p>We are professional image editors — precision, passion, and perfection in every pixel.</p>
-</header>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZoomCasa - Real Estate Media Services</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    .logo-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-heading img {
+      height: 40px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  </style>
 </head>
 <body>
   <nav>
+    <div class="logo-heading">
+      <img src="logo.png" alt="ZoomCasa Logo" />
+      <h1 style="margin: 0;">ZoomCasa</h1>
+    </div>
     <div class="dropdown">
       <button class="dropbtn" onclick="toggleServices()">Our Services</button>
       <div class="dropdown-content">
@@ -27,26 +40,9 @@
       </div>
     </div>
   </nav>
-  <nav>
-  <a href="#" style="margin-right:auto;">
-    <img src="logo.png" alt="ZoomCasa Logo" style="height:40px;">
-  </a>
-  <div class="dropdown">
-    <button class="dropbtn" onclick="toggleServices()">Our Services</button>
-    <div class="dropdown-content">
-      <a href="#image-editing">Image Editing</a>
-      <a href="#video-editing">Video Editing</a>
-      <a href="#virtual-staging">Virtual Staging</a>
-      <a href="#drone-images">Drone Images</a>
-      <a href="#floor-plans">Floor Plans</a>
-    </div>
-  </div>
-</nav>
-
 
   <header>
-    <h1>ZoomCasa</h1>
-    <p>We are professional image editors — precision, passion, and perfection in every pixel.</p>
+    <p style="text-align:center">We are professional image editors — precision, passion, and perfection in every pixel.</p>
   </header>
 
   <section id="services-section">
@@ -97,7 +93,7 @@
     <h2 style="text-align:center;">Contact Us</h2>
     <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
       <h3>Manoj Hegde</h3>
-      <p><strong>Owner and Operator</strong></p>
+      <p><strong>Founder & Operator</strong></p>
       <p>📍 Bangalore, India</p>
       <p>☎️ (+91) 8277702576</p>
       <p><a href="mailto:manuhegde2002@gmail.com">manuhegde2002@gmail.com</a></p>
