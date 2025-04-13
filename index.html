@@ -5,167 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZoomCasa - Real Estate Media Services</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-      color: #333;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Watermark logo animation */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      width: 600px;
-      height: 600px;
-      background-image: url('logo.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.04;
-      transform: translate(-50%, -50%) scale(0.8);
-      animation: fadeInScale 3s ease forwards;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    header {
-      background-color: #0a66c2;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      animation: fadeInDown 1s ease-out;
-      position: relative;
-    }
-
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 120px;
-      opacity: 0.5;
-      animation: fadeInLogo 2s ease-in-out forwards;
-    }
-
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 3em;
-    }
-
-    header p {
-      font-size: 1.2em;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-      animation: fadeIn 1.5s ease-in;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeInUp 0.5s ease forwards;
-      position: relative;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #0a66c2;
-    }
-
     .description {
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-      font-size: 0.95em;
-      color: #555;
-      margin-top: 10px;
-      height: 0;
-      overflow: hidden;
+      opacity: 1 !important;
+      height: auto !important;
+      overflow: visible !important;
     }
 
-    .card:hover .description {
-      opacity: 1;
-      height: auto;
-    }
-
-    .cta {
-      text-align: center;
-      margin-top: 40px;
-      animation: fadeInUp 1s ease-in;
-    }
-
-    .cta a {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #0a66c2;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-      font-size: 0.9em;
-    }
-
-    .social-links a {
-      margin: 0 10px;
-      display: inline-block;
-      color: #0a66c2;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    /* Animations */
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInLogo {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 0.5; transform: scale(1); }
-    }
-
-    @keyframes fadeInScale {
-      0% { opacity: 0; transform: translate(-50%, -50%) scale(0.6); }
-      100% { opacity: 0.04; transform: translate(-50%, -50%) scale(1); }
-    }
+    .view-samples {
+  display: inline-block;
+  margin-top: 8px;
+  color: #0a66c2;
+  font-size: 0.85em;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+  text-decoration: underline;
+}
   </style>
 </head>
 <body>
@@ -177,21 +34,21 @@
   <section>
     <h2 style="text-align:center;">Our Services</h2>
     <div class="services">
-      <div class="card"><h3>Single image Enhancement</h3><div class="description">We clean up your photos by adjusting brightness, contrast, and color — just enough to make everything pop and look super polished.</div></div>
-      <div class="card"><h3>HDR Bracketing</h3><div class="description">We blend multiple exposures together so you get a perfectly balanced shot with great detail in both the shadows and highlights.</div></div>
-      <div class="card"><h3>360° Enhancement</h3><div class="description">We stitch your 360° shots smoothly and fix colors so your virtual tours look seamless and professional.</div></div>
-      <div class="card"><h3>Day to Dusk</h3><div class="description">We take your daytime shots and turn them into gorgeous twilight scenes — perfect for adding that warm, inviting glow.</div></div>
-      <div class="card"><h3>Twilight</h3><div class="description">We enhance your real twilight photos by boosting colors and lighting, making every shot look magical and dramatic.</div></div>
-      <div class="card"><h3>Item Removal</h3><div class="description">Got unwanted stuff in the photo? We’ll take it out cleanly — whether it’s clutter, signage, or even furniture.</div></div>
-      <div class="card"><h3>Staging</h3><div class="description">We digitally furnish empty rooms to make them feel like home — modern, stylish, and realistic.</div></div>
-      <div class="card"><h3>2D Floor Plan</h3><div class="description">Clean, easy-to-read black-and-white floor plans that show the layout of the property at a glance.</div></div>
-      <div class="card"><h3>2D Floor Plan (Color)</h3><div class="description">Same as our 2D plans, but with color — adds a little extra clarity and visual appeal.</div></div>
-      <div class="card"><h3>3D Floor Plan</h3><div class="description">A full 3D layout with furniture and textures to give clients a clear, lifelike sense of the space.</div></div>
-      <div class="card"><h3> Single Exposure</h3><div class="description">A standard photo edited from a single image to enhance brightness, contrast, color balance, and clarity. Ideal for quick and consistent real estate listings.</div></div>
-      <div class="card"><h3> Sky Replacement</h3><div class="description"> Transforms dull or overcast skies into vibrant blue skies to instantly improve curb appeal and attract more attention to property photos.</div></div>
-      <div class="card"><h3> Sky Exterior</h3><div class="description">A fully enhanced exterior shot with sky replacement, lighting adjustments, and color correction—perfect for making the property stand out in any weather condition.</div></div>
-      <div class="card"><h3> Manual Blend</h3><div class="description">Combines multiple exposures manually to create a balanced image with perfect lighting, detail, and natural-looking results—especially useful for interiors with large windows.</div></div>
-      <div class="card"><h3> Virtual Renovation</h3><div class="description">Digitally updates or remodels a space by adding modern finishes, furniture, or design elements, helping buyers visualize the property's full potential without physical changes</div></div>
+      <div class="card"><h3>Image Enhancement</h3><div class="description">We clean up your photos by adjusting brightness, contrast, and color — just enough to make everything pop and look super polished.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>HDR Bracketing</h3><div class="description">We blend multiple exposures together so you get a perfectly balanced shot with great detail in both the shadows and highlights.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>Aerial Edit</h3><div class="description">We fine-tune your drone shots to make sure they’re sharp, colorful, and eye-catching from up high.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>Flash Ambient</h3><div class="description">We combine flash and natural light shots to get crisp, well-lit interiors with true-to-life colors and minimal shadows.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>360° Enhancement</h3><div class="description">We stitch your 360° shots smoothly and fix colors so your virtual tours look seamless and professional.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>Day to Dusk</h3><div class="description">We take your daytime shots and turn them into gorgeous twilight scenes — perfect for adding that warm, inviting glow.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>Twilight</h3><div class="description">We enhance your real twilight photos by boosting colors and lighting, making every shot look magical and dramatic.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>Item Removal</h3><div class="description">Got unwanted stuff in the photo? We’ll take it out cleanly — whether it’s clutter, signage, or even furniture.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>Portrait</h3><div class="description">We retouch portraits to bring out natural beauty while keeping it real — great for agent headshots or lifestyle photos.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>Real Estate Video</h3><div class="description">We create a sleek, cinematic video walkthrough that highlights the best features of the property in under two and a half minutes.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>Staging</h3><div class="description">We digitally furnish empty rooms to make them feel like home — modern, stylish, and realistic.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>Clipping Path</h3><div class="description">We cut out your subject from the background with precision, so you can place it wherever you need.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>2D Floor Plan</h3><div class="description">Clean, easy-to-read black-and-white floor plans that show the layout of the property at a glance.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>2D Floor Plan (Color)</h3><div class="description">Same as our 2D plans, but with color — adds a little extra clarity and visual appeal.<br><span class="view-samples">View Samples</span></div></div>
+      <div class="card"><h3>3D Floor Plan</h3><div class="description">A full 3D layout with furniture and textures to give clients a clear, lifelike sense of the space.<br><span class="view-samples">View Samples</span></div></div>
     </div>
   </section>
 
