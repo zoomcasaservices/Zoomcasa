@@ -23,6 +23,35 @@
   transition: transform 0.3s ease-in-out;
   text-decoration: underline;
 }
+/* Watermark animation */
+body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      background-image: url('logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.6);
+      z-index: 0;
+      pointer-events: none;
+      animation: fadeInScale 3s ease forwards;
+    }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.6);
+      }
+      100% {
+        opacity: 0.04;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
   </style>
 </head>
 <body>
