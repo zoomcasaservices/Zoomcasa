@@ -6,7 +6,7 @@
   <title>ZoomCasa - Real Estate Media Services</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <nav>
@@ -14,78 +14,25 @@
       <img src="logo.png" alt="ZoomCasa Logo" />
       <h1>ZoomCasa</h1>
     </div>
-    <div class="dropdown">
-      <button class="dropbtn" onclick="toggleServices()">Our Services</button>
-      <div class="dropdown-content">
-        <a href="#image-editing">Image Editing</a>
-        <a href="#video-editing">Video Editing</a>
-        <a href="#virtual-staging">Virtual Staging</a>
-        <a href="#drone-images">Drone Images</a>
-        <a href="#floor-plans">Floor Plans</a>
-      </div>
+    <div class="nav-links">
+      <a href="#services-section">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#follow">Follow Us</a>
     </div>
   </nav>
 
   <header>
-    <p style="text-align:center">We are professional image editors — precision, passion, and perfection in every pixel.</p>
+    <p class="tagline">Professional Image editing service — precision, passion, and perfection in every pixel.</p>
   </header>
 
   <section id="services-section">
-    <h2 style="text-align:center;">Our Services</h2>
+    <h2 class="section-title">Our Services</h2>
     <div class="services">
-      <div class="card" id="image-editing">
-        <h3>Image Editing</h3>
-        <p>Flawless retouching, sky replacements, color correction and more to make every listing pop.</p>
-      </div>
-      <div class="card" id="video-editing">
-        <h3>Video Editing</h3>
-        <p>Branded videos, smooth walkthroughs, agent intros—edited for maximum impact.</p>
-      </div>
-      <div class="card" id="virtual-staging">
-        <h3>Virtual Staging</h3>
-        <p>Empty room? No problem. We add tasteful furniture and decor to drive imagination.</p>
-      </div>
-      <div class="card" id="drone-images">
-        <h3>Drone Images</h3>
-        <p>Beautiful aerial shots to showcase the full property and surrounding area.</p>
-      </div>
-      <div class="card" id="floor-plans">
-        <h3>Floor Plans</h3>
-        <p>Clean, accurate, and fast-delivered floor plans for better property understanding.</p>
-      </div>
+      <!-- Injected via JS or manually added cards -->
     </div>
   </section>
 
-  <section>
-    <h2 style="text-align:center;">Why Choose ZoomCasa?</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Available 24/7</h3>
-        <p>No matter your time zone, we’re ready when you are.</p>
-      </div>
-      <div class="card">
-        <h3>7+ Years of Experience</h3>
-        <p>Trusted by real estate pros worldwide to deliver consistently great results.</p>
-      </div>
-      <div class="card">
-        <h3>Affordable Pricing</h3>
-        <p>Top-tier quality that doesn’t break the bank.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2 style="text-align:center;">Contact Us</h2>
-    <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
-      <h3>Manoj Hegde</h3>
-      <p><strong>Founder & Operator</strong></p>
-      <p>📍 Bangalore, India</p>
-      <p>☎️ (+91) 8277702576</p>
-      <p><a href="mailto:manuhegde2002@gmail.com">manuhegde2002@gmail.com</a></p>
-    </div>
-  </section>
-
-  <div class="follow-us">
+  <div id="follow" class="follow-us">
     <h3>Follow us</h3>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/zoom-casa-217b3735b" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -93,26 +40,21 @@
     </div>
   </div>
 
-  <div class="cta">
+  <div class="cta" id="contact">
     <p>Let’s create visuals that sell. Reach out and see the difference!</p>
     <a href="mailto:zoomcasapvtltd@gmail.com">Contact Us</a>
   </div>
 
   <footer>
-    &copy; 2018 ZoomCasa. All rights reserved.
+    <h4>Founder</h4>
+    <p>ZoomCasa was founded with a mission to redefine real estate media through creativity and technology.</p>
+    <p>&copy; 2018 ZoomCasa. All rights reserved.</p>
   </footer>
 
   <script>
-    function toggleServices() {
-      const section = document.getElementById('services-section');
-      if (section.style.display === 'none' || section.style.display === '') {
-        section.style.display = 'block';
-        section.classList.add('animated-services');
-        section.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        section.style.display = 'none';
-        section.classList.remove('animated-services');
-      }
+    function toggleDesc(card) {
+      const desc = card.querySelector('.service-desc');
+      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
     }
   </script>
 </body>
