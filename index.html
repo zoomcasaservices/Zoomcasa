@@ -1,125 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZoomCasa - Real Estate Media Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-      color: #333;
-    }
-    header {
-      background-color: #0a66c2;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      animation: fadeInDown 1s ease-out;
-      position: relative;
-    }
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 120px;
-      opacity: 0.5;
-      animation: fadeInLogo 2s ease-in-out forwards;
-    }
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 3em;
-    }
-    header p {
-      font-size: 1.2em;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-      animation: fadeIn 1.5s ease-in;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeInUp 0.5s ease forwards;
-      position: relative;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #0a66c2;
-    }
-    .description {
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-      font-size: 0.95em;
-      color: #555;
-      margin-top: 10px;
-      height: 0;
-      overflow: hidden;
-    }
-    .card:hover .description {
-      opacity: 1;
-      height: auto;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 40px;
-      animation: fadeInUp 1s ease-in;
-    }
-    .cta a {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #0a66c2;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-      font-size: 0.9em;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInLogo {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 0.5; transform: scale(1); }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
   <header>
-    <img src="your-logo.png" alt="ZoomCasa Logo" class="logo">
     <h1>ZoomCasa</h1>
-    <p>Professional Real Estate Image & Video Editing | 24/7 Service | 7+ Years Experience</p>
+    <p>Expert Real Estate Photo & Video Editing | Fast Turnaround | Trusted Since 2018</p>
   </header>
 
   <section>
@@ -152,13 +43,23 @@
     </div>
   </section>
 
+  <section class="contact">
+    <h2>FIND US HERE</h2>
+    <p>📍 Based in Bangalore, India</p>
+    <p>📧 <a href="mailto:zoomcasapvtltd@gmail.com">zoomcasapvtltd@gmail.com</a></p>
+    <p>📞 <a href="tel:+918277702576">+91 82777 02576</a></p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/zoomcasa.ltd/" target="_blank">📸 Instagram</a>
+    </div>
+  </section>
+
   <div class="cta">
-    <p>Let’s bring your listings to life. Get in touch today!</p>
-    <a href="mailto:zoomcasapvtltd@gmail.com">Contact Us</a>
+    <p>Let’s bring your listings to life! Get in touch today!</p>
+    <a href="mailto:zoomcasapvtltd@gmail.com">Inquire for Pricing</a>
   </div>
 
   <footer>
-    &copy; 2018 ZoomCasa. All rights reserved.
+    &copy; 2018–2025 ZoomCasa. All rights reserved. | Bangalore, India
   </footer>
 </body>
 </html>
