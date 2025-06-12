@@ -109,6 +109,14 @@ footer {
   text-align: center;
 }
 
+.team-photos img {
+  border-radius: 12px;
+  width: 100px; /* smaller than before */
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
 .contact a {
   color: #0a66c2;
   text-decoration: none;
